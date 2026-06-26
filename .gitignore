@@ -7,3 +7,4 @@ dist/
 build/
 desktop.ini
 certificats.txt
+node_modules/
