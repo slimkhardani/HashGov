@@ -1,0 +1,330 @@
+/* Admin Sidebar - Matched to User Sidebar Style */
+.sidebar {
+  --primary: #4763e4;
+  --primary-light: #6c7fff;
+  --primary-dark: #3a4fc8;
+  --accent: #00d4ff;
+  --sidebar-bg: #0d0f15;
+  --text: #f5f5f7;
+  --text-secondary: #a0a0a0;
+  --border: #2a2f3a;
+  --danger: #f44336;
+  --transition: all 0.3s ease;
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 80px;
+  --header-height: 70px;
+
+  inline-size: var(--sidebar-width);
+  background-color: var(--sidebar-bg);
+  border-inline-end: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inset-block-end: 0;
+  z-index: 100;
+  overflow-y: auto;
+}
+
+.sidebar.closed {
+  inline-size: var(--sidebar-collapsed-width);
+  overflow: hidden;
+}
+
+.sidebar.closed .app-logo-text,
+.sidebar.closed .nav-link span {
+  opacity: 0;
+  inline-size: 0;
+  overflow: hidden;
+}
+
+.sidebar-header {
+  block-size: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-block-end: 1px solid var(--border);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon-sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  inline-size: 36px;
+  block-size: 36px;
+  background: none;
+  border-radius: 8px;
+}
+
+.app-logo-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  transition: var(--transition);
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0 12px;
+}
+
+/* Submenu styles for User Submissions */
+.nav-parent .nav-parent-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 15px;
+  background: transparent;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.nav-parent .nav-parent-link:hover,
+.nav-parent.active .nav-parent-link {
+  background: rgba(71, 99, 228, 0.08);
+  color: var(--primary);
+}
+
+.nav-submenu {
+  padding-left: 16px;
+  margin-top: 2px;
+  margin-bottom: 6px;
+  list-style: none;
+}
+
+.nav-subitem {
+  margin-bottom: 2px;
+}
+
+.nav-sublink {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  padding: 8px 14px 8px 22px;
+  border-radius: 6px;
+  color: var(--text-secondary);
+  background: transparent;
+  transition: var(--transition);
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-sublink:hover,
+.nav-subitem.active .nav-sublink {
+  background: linear-gradient(90deg, rgba(71, 99, 228, 0.13) 0%, rgba(0, 212, 255, 0.09) 100%);
+  color: var(--primary);
+}
+
+.nav-subitem.active .nav-sublink {
+  font-weight: 600;
+  border-left: 3px solid var(--primary);
+  padding-left: 19px;
+  background: rgba(71, 99, 228, 0.13);
+}
+
+
+.nav-item {
+  margin-block-end: 8px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  transition: var(--transition);
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.nav-link svg {
+  inline-size: 20px;
+  block-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 50%;
+  padding: 0;
+  min-inline-size: 20px;
+  flex-shrink: 0;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+}
+
+.nav-item.active .nav-link {
+  background: linear-gradient(
+    90deg,
+    rgba(71, 99, 228, 0.1) 0%,
+    rgba(0, 212, 255, 0.1) 100%
+  );
+  color: var(--primary);
+  border-inline-start: 3px solid var(--primary);
+  font-weight: 500;
+}
+
+.sidebar-footer {
+  padding: 16px;
+  border-block-start: 1px solid var(--border);
+}
+
+/* User profile styles */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  border-radius: 8px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.user-profile:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.avatar {
+  inline-size: 40px;
+  block-size: 40px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.user-info {
+  flex: 1;
+  min-inline-size: 0;
+  transition: var(--transition);
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-role {
+  font-size: 12px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Dropdown menu styles */
+.user-dropdown {
+  position: absolute;
+  inset-block-end: 70px;
+  inset-inline-start: 16px;
+  inset-inline-end: 16px;
+  background-color: var(--sidebar-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  z-index: 10;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-item {
+  margin: 0;
+}
+
+.dropdown-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  color: var(--text-secondary);
+  transition: var(--transition);
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown-link-logout {
+  color: var(--danger);
+  background-color: transparent;
+}
+
+.chevron-rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    inline-size: var(--sidebar-collapsed-width);
+  }
+  .sidebar .app-logo-text,
+  .sidebar .nav-link span {
+    opacity: 0;
+    inline-size: 0;
+    overflow: hidden;
+  }
+  .sidebar.open {
+    inline-size: var(--sidebar-width);
+  }
+  .sidebar.open .app-logo-text,
+  .sidebar.open .nav-link span {
+    opacity: 1;
+    inline-size: auto;
+    overflow: visible;
+  }
+}

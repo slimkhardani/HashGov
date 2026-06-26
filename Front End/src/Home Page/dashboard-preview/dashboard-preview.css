@@ -1,0 +1,105 @@
+.dashboard-preview {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  border: 1px solid var(--divider);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.dashboard-preview.large {
+  height: 400px;
+}
+
+.dashboard-header {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--divider);
+}
+
+.dashboard-title {
+  font-weight: 600;
+}
+
+.dashboard-stats {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.stat-card {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--divider);
+}
+
+.dashboard-content {
+  display: flex;
+  height: calc(100% - 53px);
+}
+
+.dashboard-sidebar {
+  width: 150px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-right: 1px solid var(--divider);
+  padding: 1rem 0;
+}
+
+.sidebar-item {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.sidebar-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-item.active {
+  background-color: var(--primary);
+  color: white;
+}
+
+.dashboard-main {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-chart {
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--divider);
+}
+
+.dashboard-table {
+  flex: 1;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--divider);
+}
+
+.table-row {
+  display: flex;
+  border-bottom: 1px solid var(--divider);
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-row.header {
+  background-color: rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+}
+
+.table-cell {
+  flex: 1;
+  padding: 0.75rem 1rem;
+}

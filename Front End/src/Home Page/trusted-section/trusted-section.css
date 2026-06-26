@@ -1,0 +1,25 @@
+.trusted-section {
+  padding: 3rem 5%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid var(--divider);
+  border-bottom: 1px solid var(--divider);
+}
+
+.trusted-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.trusted-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.trusted-logo {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  font-weight: 500;
+}

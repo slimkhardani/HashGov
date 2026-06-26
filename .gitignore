@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.local
+.env.*
+!.env.sample
+dist/
+build/
+desktop.ini
+certificats.txt

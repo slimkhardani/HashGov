@@ -1,0 +1,40 @@
+.highlights-section {
+  padding: 5rem 5%;
+  background: linear-gradient(135deg, #1a1f2e 0%, #0f1117 100%);
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.highlight-card {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--divider);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+  background-color: var(--card-bg-hover);
+}
+
+.highlight-icon {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+}
+
+.highlight-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.highlight-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}

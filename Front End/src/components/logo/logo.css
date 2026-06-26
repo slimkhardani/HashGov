@@ -1,0 +1,25 @@
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.logo-svg {
+  height: 60px;
+  width: auto;
+  color: blue;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.footer-logo-wrapper {
+  gap: 5px;
+}
+
+.footer-logo-wrapper .logo-text {
+  font-size: 1.2rem;
+}

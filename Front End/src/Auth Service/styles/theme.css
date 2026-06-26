@@ -1,0 +1,37 @@
+:root {
+  /* Dark theme (default) */
+  --background: radial-gradient(circle, #0c0c2f, #000);
+  --card-bg: rgba(15, 23, 42, 0.8);
+  --text: #ffffff;
+  --text-secondary: #94a3b8;
+  --input-bg: #0f172a;
+  --input-border: #1e293b;
+  --primary: #3b82f6;
+  --button-bg: #ffffff;
+  --button-text: #0f172a;
+  --divider: #334155;
+  --hover-bg: rgba(255, 255, 255, 0.1);
+  --active-bg: rgba(255, 255, 255, 0.15);
+}
+
+:root.light {
+  /* Light theme */
+  --background: radial-gradient(circle, #b4d1f0, #ffffff);
+  --card-bg: #ffffff;
+  --text: #0f172a;
+  --text-secondary: #64748b;
+  --input-bg: #f1f5f9;
+  --input-border: #e2e8f0;
+  --primary: #3b82f6;
+  --button-bg: #0f172a;
+  --button-text: #ffffff;
+  --divider: #e2e8f0;
+  --hover-bg: rgba(0, 0, 0, 0.05);
+  --active-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* Apply theme to body */
+body {
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}

@@ -1,0 +1,324 @@
+@import "../styles/theme.css";
+
+/* Base styles and reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.login-page-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  background: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+}
+
+/* Main container with background gradient */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--background);
+  padding: 20px;
+  transition: background 0.3s ease;
+}
+
+/* Form container */
+.login-form-container {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 450px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.login-logo-container {
+  margin-bottom: 24px;
+}
+
+.login-logo {
+  display: flex;
+  align-items: center;
+}
+
+.login-logo-icon {
+  color: var(--primary);
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+.login-logo-text {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Heading */
+h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: var(--text);
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 24px;
+  position: relative;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* Add extra space above the password label */
+input[type="email"] + label[for="password"] {
+  margin-top: 20px;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 1px solid var(--input-border);
+  background-color: var(--input-bg);
+  color: var(--text);
+  font-size: 16px;
+  transition: border-color 0.2s, background-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* Error styling */
+input.error {
+  border-color: #ef4444;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* Form row layout */
+.form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-row .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.form-row.full-width .form-group {
+  width: 100%;
+}
+
+/* Login form */
+form {
+  width: 100%;
+}
+
+/* Error messages */
+.api-error-message {
+  background-color: rgba(255, 87, 87, 0.1);
+  border-left: 4px solid #ff5757;
+  color: #ff5757;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Special styling for frozen account error */
+.frozen-account-error {
+  background-color: rgba(0, 149, 255, 0.15) !important;
+  border: 1px solid #0095ff !important;
+  color: #0095ff !important;
+  font-weight: 600;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  /* Override any default error styles */
+  border-radius: 4px;
+}
+
+.frozen-account-error::before {
+  content: '❄️';
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Checkbox styling */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary);
+}
+
+.checkbox-group label {
+  margin-bottom: 0;
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* Button styling */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s;
+  margin-bottom: 12px;
+  border: none;
+}
+
+.login-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.primary {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+
+.primary:hover {
+  opacity: 0.9;
+}
+
+.button-icon {
+  margin-right: 8px;
+}
+
+/* Forgot password link */
+.forgot-password-link {
+  text-align: center;
+  margin: 12px 0;
+}
+
+.forgot-password-link a {
+  font-size: 14px;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 16px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid var(--divider);
+}
+
+.divider span {
+  padding: 0 10px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* Sign up link */
+.signup-link {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.signup-link a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* API Error Message */
+.api-error-message {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  text-align: center;
+  border: 1px solid #ef4444;
+  font-size: 14px;
+}
+
+/* Success Message */
+.success-message {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  text-align: center;
+  border: 1px solid #22c55e;
+  font-size: 14px;
+}
+
+/* Text button for logout */
+.text-button {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.logout-link {
+  text-align: center;
+  margin-top: 12px;
+}

@@ -1,0 +1,93 @@
+.hedera-section {
+  padding: 5rem 5%;
+  background: var(--background);
+}
+
+.hedera-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.hedera-text {
+  flex: 1;
+}
+
+.hedera-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hedera-diagram-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hedera-diagram-image .logo-wrapper {
+  transform: scale(2.5);
+}
+
+/* Features styling */
+.feature-list {
+  list-style: none;
+  margin: 2rem 0;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.list-icon {
+  color: var(--primary);
+  margin-right: 1rem;
+  width: 20px;
+  height: 20px;
+}
+
+.learn-more-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  color: var(--text);
+  border: 1px solid var(--divider);
+  border-radius: 6px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.learn-more-btn:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .hedera-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hedera-image,
+  .hedera-text {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  
+  .hedera-diagram-image .logo-wrapper {
+    transform: scale(2);
+  }
+}
+
+@media (max-width: 576px) {
+  .hedera-diagram-image .logo-wrapper {
+    transform: scale(1.5);
+  }
+}

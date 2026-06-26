@@ -1,0 +1,146 @@
+/* Header Styles with identity- prefix to prevent conflicts */
+:root {
+  --header-bg: #0f1117;
+  --text: #f5f5f7;
+  --text-secondary: #a0a0a0;
+  --border: #2a2f3a;
+  --danger: #f44336;
+  --transition: all 0.3s ease;
+  --header-height: 70px;
+  --primary: #4763e4;
+  --accent: #00d4ff;
+}
+
+.identity-header {
+  height: var(--header-height);
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+.identity-header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.identity-menu-button {
+  color: var(--text-secondary);
+  transition: var(--transition);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.identity-menu-button:hover {
+  color: var(--text);
+}
+
+.identity-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+
+.identity-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+
+
+
+
+.identity-notifications {
+  position: relative;
+}
+
+.identity-notification-button {
+  color: var(--text-secondary);
+  transition: var(--transition);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.identity-notification-button:hover {
+  color: var(--text);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.identity-notification-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  background-color: var(--danger);
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.identity-user-profile-mini {
+  cursor: pointer;
+}
+
+.identity-avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.identity-image-container {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.identity-profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Removed search bar styles */
+}
+
+@media (max-width: 576px) {
+  .identity-header h1 {
+    font-size: 20px;
+  }
+
+  .identity-header {
+    padding: 0 16px;
+  }
+}

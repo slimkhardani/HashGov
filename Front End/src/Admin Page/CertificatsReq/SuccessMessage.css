@@ -1,0 +1,230 @@
+.success-message-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.success-message {
+  background: #13151e;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border: 1px solid #2d3748;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.success-message-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.success-icon {
+  background: rgba(52, 211, 153, 0.1);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  color: #36d399;
+}
+
+.success-message-header h3 {
+  color: #fff;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  flex: 1;
+}
+
+.success-close-btn {
+  color: #a0aec0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.success-close-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.success-message-content {
+  color: #cbd5e0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.success-message-content p {
+  margin: 0 0 12px 0;
+}
+
+.success-message-content p:last-child {
+  margin-bottom: 0;
+}
+
+.nft-details {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+  border-left: 3px solid #36d399;
+}
+
+.nft-details p {
+  margin: 8px 0;
+  font-family: monospace;
+  font-size: 14px;
+  overflow-wrap: break-word;
+}
+
+.button-container {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.success-button {
+  background: #36d399;
+  color: #13151e;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.success-button:hover {
+  background: #2bb980;
+  transform: translateY(-1px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 1100;
+  max-width: 420px;
+  width: calc(100% - 48px);
+  animation: slide-in 0.3s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.success-message {
+  background-color: #1a2234;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  color: #fff;
+  border-left: 5px solid #36d399;
+}
+
+.success-message-header {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  background-color: rgba(54, 211, 153, 0.1);
+  border-bottom: 1px solid rgba(54, 211, 153, 0.2);
+}
+
+.success-icon {
+  color: #36d399;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.success-message-header h3 {
+  flex: 1;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #f5f5f7;
+}
+
+.success-close-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.success-close-btn:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.success-message-content {
+  padding: 16px 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.success-message-content p {
+  margin: 0 0 8px 0;
+}
+
+.success-message-content p:last-child {
+  margin-bottom: 0;
+}
+
+.success-message-content ul {
+  margin: 8px 0;
+  padding-left: 24px;
+}
+
+.success-message-content li {
+  margin-bottom: 4px;
+}
+
+.success-message-content strong {
+  color: #fff;
+  font-weight: 600;
+}

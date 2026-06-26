@@ -1,0 +1,675 @@
+.app-identity-page {
+  /* Base Variables */
+  --primary: #4763e4;
+  --primary-light: #6c7fff;
+  --primary-dark: #3a4fc8;
+  --accent: #00d4ff;
+  --background: #0f1117d2;
+  --card-bg: #161a23;
+  --card-bg-hover: #1e2330;
+  --sidebar-bg: #0d0f15;
+  --header-bg: #0f1117;
+  --text: #f5f5f7;
+  --text-secondary: #a0a0a0;
+  --text-tertiary: #6c7293;
+  --border: #2a2f3a;
+  --success: #4caf50;
+  --warning: #ff9800;
+  --danger: #f44336;
+  --info: #2196f3;
+  --error: #ff4d4f;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --transition: all 0.3s ease;
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 80px;
+  --header-height: 70px;
+}
+
+/* Error and Required Field Styles */
+.app-identity-page .app-required {
+  color: var(--error);
+  margin-left: 4px;
+}
+
+.app-identity-page .app-error-text {
+  color: var(--error);
+  font-size: 13px;
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+.app-identity-page .app-input-error {
+  border-color: var(--error) !important;
+}
+
+.app-identity-page .app-input-error:focus {
+  border-color: var(--error) !important;
+  box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2) !important;
+}
+
+/* Highlight for field errors, especially for uniqueness validation */
+.field-error-highlight {
+  animation: errorPulse 1.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+  border-color: var(--error) !important;
+  box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.3) !important;
+}
+
+@keyframes errorPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 77, 79, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 77, 79, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 77, 79, 0);
+  }
+}
+
+/* Rest of your existing styles */
+.app-identity-page .app-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.app-identity-page .app-main-content {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  transition: var(--transition);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-identity-page .app-main-content.app-sidebar-closed {
+  margin-left: var(--sidebar-collapsed-width);
+}
+
+.app-identity-page .app-dashboard-content {
+  flex: 1;
+  padding: 24px;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.app-identity-page .app-identity-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app-identity-page .app-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--border);
+}
+
+.app-identity-page .app-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+.app-identity-page .app-step-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--card-bg);
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.app-identity-page .app-step-active .app-step-icon {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  box-shadow: 0 0 15px rgba(71, 99, 228, 0.4);
+}
+
+.app-identity-page .app-step-connector {
+  flex: 1;
+  height: 2px;
+  background-color: var(--border);
+  position: relative;
+  z-index: 1;
+}
+
+.app-identity-page .app-form-container {
+  padding: 32px;
+  width: 700px;
+}
+
+.app-identity-page .app-form-step {
+  display: none;
+}
+
+.app-identity-page .app-form-step.app-step-active {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.app-identity-page .app-form-title {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.app-identity-page .app-form-description {
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+/* Styling for the warning message */
+.app-identity-page .app-warning-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 15px;
+  background-color: rgba(255, 152, 0, 0.1);
+  border: 1px solid var(--warning);
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.app-identity-page .app-warning-message .warning-icon {
+  color: var(--warning);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.app-identity-page .app-warning-message p {
+  color: var(--text);
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.app-identity-page .app-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.app-identity-page .app-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.app-identity-page .app-form-group.app-full-width {
+  grid-column: span 2;
+}
+
+.app-identity-page .app-form-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.app-identity-page .app-form-input,
+.app-identity-page .app-form-select {
+  padding: 12px 16px;
+  background-color: rgba(22, 22, 22, 0.095);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 16px;
+  transition: var(--transition);
+}
+
+.app-identity-page .app-form-input:focus,
+.app-identity-page .app-form-select:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(71, 99, 228, 0.2);
+}
+
+.app-identity-page .app-form-select option {
+  background-color: var(--card-bg);
+  color: var(--text);
+  padding: 12px;
+}
+
+.app-identity-page .app-form-select option:hover,
+.app-identity-page .app-form-select option:focus,
+.app-identity-page .app-form-select option:checked {
+  background-color: var(--primary);
+  color: white;
+}
+
+.app-identity-page .app-form-input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.app-identity-page .app-form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236c7293' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+/* Avatar Grid Styles */
+.avatar-section {
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.avatar-section label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.avatar-grid-container {
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding: 10px 0;
+}
+
+.avatar-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  overflow-y: auto;
+  max-height: 250px;
+  padding: 5px;
+  justify-content: center;
+}
+
+.avatar-grid::-webkit-scrollbar {
+  width: 8px;
+}
+
+.avatar-grid::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.avatar-grid::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.avatar-grid::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+.avatar-option {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.avatar-option:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-option.selected {
+  border-color: #4763e4;
+  box-shadow: 0 0 0 3px rgba(71, 99, 228, 0.3);
+}
+
+.avatar-option img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Remove old list styles */
+.avatar-list-container,
+.avatar-list {
+  display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .avatar-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .avatar-option {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media (max-width: 480px) {
+  .avatar-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .avatar-option {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Success Message Styles */
+.app-identity-page .app-success-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.app-identity-page .app-success-message {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--shadow);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.app-identity-page .app-success-message h2 {
+  margin: 20px 0;
+  color: var(--success);
+}
+
+.app-identity-page .app-success-message button {
+  margin-top: 20px;
+  min-width: 120px;
+}
+
+.app-identity-page .app-success-message .app-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.app-identity-page .app-success-message .app-close-btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal Styles */
+.app-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 17, 23, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.app-modal {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  max-width: 400px;
+  width: 90%;
+}
+
+.app-modal h3 {
+  color: var(--text);
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.app-modal p {
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.app-modal button {
+  min-width: 120px;
+}
+
+.app-identity-page .app-form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.app-identity-page .app-btn-primary,
+.app-identity-page .app-btn-secondary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.app-identity-page .app-btn-primary {
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+  color: white;
+  border: none;
+}
+
+.app-identity-page .app-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(71, 99, 228, 0.3);
+}
+
+.app-identity-page .app-btn-secondary {
+  background-color: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.app-identity-page .app-btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-3px);
+}
+
+.app-identity-page .app-image-upload-container {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.app-identity-page .app-image-preview {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--border);
+  flex-shrink: 0;
+}
+
+.app-identity-page .app-preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.app-identity-page .app-no-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+}
+
+.app-identity-page .app-no-image span {
+  font-size: 10px;
+}
+
+.app-identity-page .app-image-upload-controls {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.app-identity-page .app-file-input {
+  display: none;
+}
+
+.app-identity-page .app-upload-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background-color: var(--primary);
+  color: #ffffff !important;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  text-align: center;
+  transition: var(--transition);
+  max-width: 200px;
+}
+
+.app-identity-page .app-upload-btn:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+  color: #ffffff !important;
+}
+
+.app-identity-page .app-upload-hint {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .app-identity-page .app-main-content {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-identity-page .app-stepper {
+    padding: 24px 16px;
+    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+
+  .app-identity-page .app-step {
+    flex-shrink: 0;
+  }
+
+  .app-identity-page .app-step-connector {
+    min-width: 40px;
+  }
+
+  .app-identity-page .app-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .app-identity-page .app-form-group.app-full-width {
+    grid-column: span 1;
+  }
+
+  .app-identity-page .app-form-container {
+    padding: 24px 16px;
+  }
+
+  .app-identity-page .app-image-upload-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .app-identity-page .app-image-upload-controls {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .app-identity-page .app-form-actions {
+    flex-direction: column-reverse;
+    gap: 16px;
+  }
+
+  .app-identity-page .app-btn-primary,
+  .app-identity-page .app-btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .app-identity-page .app-dashboard-content {
+    padding: 16px;
+  }
+}

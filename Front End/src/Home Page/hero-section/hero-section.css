@@ -1,0 +1,143 @@
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 5%;
+  background: var(--background);
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.cta-container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.email-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--input-border);
+  background-color: var(--input-bg);
+  color: var(--text);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.cta-button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary);
+  color: var(--button-text);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.cta-button:hover {
+  background-color: var(--primary-light);
+}
+
+.terms-text {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.hero-image {
+  flex: 1;
+  /* Removed max-width to allow more space for dashboard stats */
+  margin-left: 2rem;
+}
+
+.stat-card {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--divider);
+  min-width: 120px; /* Added min-width to prevent shrinking too much */
+}
+
+/* Dashboard Preview */
+.dashboard-preview {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  border: 1px solid var(--divider);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.dashboard-header {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--divider);
+}
+
+.dashboard-title {
+  font-weight: 600;
+}
+
+.dashboard-stats {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.stat-card {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--divider);
+}
+
+.stat-title {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-value-c {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.stat-change {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.stat-change.positive {
+  background-color: rgba(0, 255, 0, 0.1);
+  color: #4caf50;
+}
+
+.stat-change.negative {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #f44336;
+}
+
+.h1-home {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--text);
+}

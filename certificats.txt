@@ -1,0 +1,42 @@
+Personal Info For both the buyer and the seller
+Full Name
+Address
+National ID Number
+
+
+Place of ID Issue
+
+
+Date of ID Issue
+
+car : 
+Manufacturer
+Fuel type
+Serial Number
+Model Type
+Horsepower
+Registration Number
+
+Date of First Circulation Authorization
+Purchase Price
+
+Motorcycle
+Manufacturer
+Model
+Year of Manufacture
+Type
+Engine Power
+Fuel Type
+Purchase Price
+
+
+Immobiliere : 
+Full Address
+Type of Property
+Surface Area in m2
+Number of Rooms
+Year of Construction
+Condition of the Property
+
+(New, renovated, needs work)
+Purchase Price

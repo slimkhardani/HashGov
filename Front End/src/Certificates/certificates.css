@@ -1,0 +1,1140 @@
+/* Base Variables */
+.certificate-page-wrapper {
+  --primary: #4763e4;
+  --primary-light: #6c7fff;
+  --primary-dark: #3a4fc8;
+  --accent: #00d4ff;
+  --background: #0f1117;
+  --card-bg: #161a23;
+  --card-bg-hover: #1e2330;
+  --sidebar-bg: #0d0f15;
+  --header-bg: #0f1117;
+  --text: #f5f5f7;
+  --text-secondary: #a0a0a0;
+  --text-tertiary: #6c7293;
+  --border: #2a2f3a;
+  --success: #4caf50;
+  --warning: #ff9800;
+  --danger: #f44336;
+  --info: #2196f3;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --transition: all 0.3s ease;
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 80px;
+  --header-height: 70px;
+}
+
+/* Certificate Page Wrapper */
+.certificate-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--background);
+}
+
+/* Admin Dashboard Layout */
+.certificate-admin-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: var(--background);
+}
+
+/* Main Content */
+.certificate-main-content {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  transition: var(--transition);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.certificate-main-content.certificate-sidebar-closed {
+  margin-left: var(--sidebar-collapsed-width);
+}
+
+/* Dashboard Content */
+.certificate-dashboard-content {
+  flex: 1;
+  padding: 24px;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Certificate Container */
+.certificate-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+  width: 100%;
+}
+
+/* Info Card */
+.certificate-info-card {
+  background-color: rgba(71, 99, 228, 0.05);
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid rgba(71, 99, 228, 0.2);
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.certificate-info-card h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: var(--primary);
+}
+
+.certificate-info-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Form Container */
+.certificate-form-container {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.certificate-form-container h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.certificate-form-description {
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+/* Form Styles */
+.certificate-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.certificate-form-section {
+  background-color: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid var(--border);
+}
+
+.certificate-form-section h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.certificate-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.certificate-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.certificate-form-group.certificate-full-width {
+  grid-column: span 2;
+}
+
+.certificate-form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.certificate-form-group input,
+.certificate-form-group select,
+.certificate-form-group textarea {
+  padding: 12px 16px;
+  background-color: rgba(22, 22, 22, 0);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 16px;
+  transition: var(--transition);
+}
+
+.certificate-form-group input:focus,
+.certificate-form-group select:focus,
+.certificate-form-group textarea:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(71, 99, 228, 0.2);
+}
+
+.certificate-form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236c7293' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.certificate-select {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 16px;
+  transition: all 0.3s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236c7293' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 40px;
+}
+
+.certificate-select option {
+  background-color: var(--card-bg);
+  color: var(--text);
+}
+
+.certificate-select:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(71, 99, 228, 0.2);
+}
+
+/* Validation and Messages */
+.certificate-validation-errors,
+.certificate-error-message,
+.certificate-success-message {
+  margin: 16px 0;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.certificate-validation-errors {
+  background-color: rgba(244, 67, 54, 0.1);
+  border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+.certificate-important-notice {
+  background-color: rgba(255, 152, 0, 0.1);
+  border: 1px solid rgba(255, 152, 0, 0.3);
+  margin: 0 0 24px 0;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.certificate-important-notice p {
+  color: var(--warning);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.certificate-notice-icon {
+  color: var(--warning);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.certificate-error-message {
+  background-color: rgba(244, 67, 54, 0.1);
+  border: 1px solid rgba(244, 67, 54, 0.3);
+  color: var(--danger);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.certificate-success-message {
+  background-color: rgba(76, 175, 80, 0.1);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  color: var(--success);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Success Popup Styling */
+.certificate-success-popup-overlay {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  inset-block-end: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.certificate-success-popup {
+  background: linear-gradient(135deg, #1a1d2d 0%, #13151e 100%);
+  border-radius: 16px;
+  padding: 40px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  animation: scaleIn 0.3s ease-out;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  inline-size: 90%;
+  max-inline-size: 500px;
+  animation: popup-appear 0.3s ease-out forwards;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.certificate-success-icon-container {
+  width: 100px;
+  height: 100px;
+  background: rgba(76, 175, 80, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.certificate-success-popup .certificate-success-icon {
+  color: var(--success);
+  stroke-width: 1.5;
+  animation: popIn 0.5s ease-out;
+}
+
+.certificate-success-popup h3 {
+  color: var(--text);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.certificate-success-popup p {
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.certificate-success-popup-timer {
+  font-size: 14px;
+  color: var(--text-tertiary);
+  margin-top: 16px;
+}
+
+/* Success Popup Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0); }
+  60% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.certificate-error-icon {
+  color: var(--danger);
+}
+
+.certificate-success-icon {
+  color: var(--success);
+}
+
+.certificate-validation-errors p {
+  color: var(--danger);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.certificate-validation-errors ul {
+  list-style-type: disc;
+  padding-left: 24px;
+  color: var(--danger);
+}
+
+.certificate-validation-errors li {
+  margin-bottom: 4px;
+}
+
+/* Form Actions */
+.certificate-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.certificate-submit-btn {
+  padding: 14px 28px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.certificate-submit-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(71, 99, 228, 0.3);
+}
+
+.certificate-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background: linear-gradient(90deg, var(--text-tertiary) 0%, var(--text-secondary) 100%);
+}
+
+/* Selection Cards */
+.certificate-selection-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.certificate-selection-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: var(--text);
+}
+
+.certificate-selection-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.certificate-selection-card {
+  width: 280px;
+  height: 220px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.certificate-selection-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  border-color: var(--primary);
+  background-color: var(--card-bg-hover);
+}
+
+.certificate-card-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(
+    135deg,
+    rgba(71, 99, 228, 0.1) 0%,
+    rgba(0, 212, 255, 0.1) 100%
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+
+.certificate-selection-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text);
+}
+
+/* Back Button */
+.certificate-back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  padding: 10px 16px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.certificate-back-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .certificate-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 992px) {
+  .certificate-main-content {
+    margin-left: 0 !important;
+  }
+
+  .certificate-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-form-group.certificate-full-width {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .certificate-dashboard-content {
+    padding: 16px;
+  }
+
+  .certificate-form-section {
+    padding: 16px;
+  }
+
+  /* Responsive Styles for Selection Cards */
+  .certificate-selection-container {
+    padding: 20px 10px;
+  }
+
+  .certificate-selection-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .certificate-selection-cards {
+    gap: 20px;
+  }
+
+  .certificate-selection-card {
+    width: 100%;
+    max-width: 280px;
+    height: 180px;
+    padding: 20px;
+  }
+
+  .certificate-card-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificate-form-actions {
+    justify-content: center;
+  }
+
+  .certificate-submit-btn {
+    width: 100%;
+  }
+
+  .certificate-section-title {
+    font-size: 16px;
+  }
+}
+
+/* Button Styling */
+.certificate-view-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: rgba(71, 99, 228, 0.1);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  color: #4763e4;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 110px;
+  margin: 0 auto;
+}
+
+.certificate-view-button:hover {
+  background-color: rgba(71, 99, 228, 0.2);
+}
+
+.certificate-hashscan-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: rgba(244, 67, 54, 0.08);
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  color: #f44336;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 110px;
+  margin: 0 auto;
+}
+
+.certificate-hashscan-button:hover {
+  background-color: rgba(244, 67, 54, 0.15);
+}
+
+/* NFT Tables */
+.certificate-nfts-table-container {
+  margin-top: 30px;
+  overflow-x: auto;
+  background-color: #171923;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #2c3e50;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+.certificate-nfts-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.certificate-nfts-table th {
+  background-color: #171923;
+  padding: 16px 15px;
+  text-align: center;
+  font-weight: 600;
+  color: #3d5af1;
+  border-bottom: 1px solid #2c3e50;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.certificate-nfts-table td {
+  padding: 14px 15px;
+  border-bottom: 1px solid #2c3e50;
+  color: #e0e0e0;
+  text-align: center;
+  transition: all 0.2s ease;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Responsive styles for NFT tables */
+@media (max-width: 1200px) {
+  .certificate-nfts-table th,
+  .certificate-nfts-table td {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 992px) {
+  .certificate-nfts-table-container {
+    padding: 15px 10px;
+  }
+  
+  .certificate-nfts-table th,
+  .certificate-nfts-table td {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+  
+  .certificate-view-button,
+  .certificate-hashscan-button {
+    padding: 5px 8px;
+    font-size: 11px;
+    max-width: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .certificate-nfts-section-title {
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .certificate-nfts-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .certificate-nft-tab {
+    padding: 10px 15px;
+    font-size: 12px;
+    flex-grow: 1;
+  }
+  
+  /* Hide less important columns on smaller screens */
+  .certificate-nfts-table th:nth-child(3),
+  .certificate-nfts-table td:nth-child(3),
+  .certificate-nfts-table th:nth-child(4),
+  .certificate-nfts-table td:nth-child(4) {
+    display: none;
+  }
+  
+  .certificate-view-button,
+  .certificate-hashscan-button {
+    max-width: 80px;
+    padding: 4px 6px;
+  }
+}
+
+@media (max-width: 576px) {
+  .certificate-nfts-table-container {
+    padding: 10px 5px;
+    margin-top: 15px;
+  }
+  
+  /* Further reduce visible columns on very small screens */
+  .certificate-nfts-table th:nth-child(1),
+  .certificate-nfts-table td:nth-child(1) {
+    display: none;
+  }
+  
+  .certificate-nfts-table th,
+  .certificate-nfts-table td {
+    padding: 8px 5px;
+    font-size: 11px;
+  }
+  
+  .certificate-my-nfts-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .certificate-nft-tab {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+  
+  .certificate-view-button,
+  .certificate-hashscan-button {
+    max-width: 70px;
+    font-size: 10px;
+  }
+  
+  .certificate-view-button svg,
+  .certificate-hashscan-button svg {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.certificate-nfts-container {
+  width: 100%;
+  padding: 30px;
+  background-color: #1a1c24;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  color: #e0e0e0;
+  border: 1px solid #2c3e50;
+  position: relative;
+  overflow: hidden;
+}
+
+.certificate-nfts-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #3d5af1;
+}
+
+.certificate-nfts-tabs {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #2c3e50;
+  padding-bottom: 0;
+  justify-content: center;
+}
+
+.certificate-nft-tab {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px 8px 0 0;
+  background-color: #171923;
+  color: #a0a0a0;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 13px;
+  border: 1px solid #2c3e50;
+  border-bottom: none;
+  position: relative;
+  top: 1px;
+}
+
+.certificate-nft-tab:hover {
+  background-color: #3d5af1;
+  color: white;
+}
+
+.certificate-nft-tab.active {
+  background-color: #1a1c24;
+  color: #3d5af1;
+  font-weight: 700;
+  border-top: 3px solid #3d5af1;
+  border-bottom: 1px solid #1a1c24;
+  z-index: 5;
+}
+
+.certificate-nft-detail-content {
+  padding: 20px;
+  background-color: #1a1c24;
+  border-radius: 0 0 8px 8px;
+}
+
+.certificate-nft-detail-content strong {
+  min-width: 140px;
+  display: inline-block;
+  color: #6c7293;
+}
+
+.certificate-link-button {
+  background-color: #2c3e50;
+  color: #f45725;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  min-width: 80px;
+  font-weight: 600;
+}
+
+.certificate-close-btn {
+  padding: 8px 16px;
+  background-color: #2c3e50;
+  color: #a0a0a0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.certificate-empty-state {
+  text-align: center;
+  padding: 40px 0;
+  color: #6c7293;
+  font-size: 16px;
+  background-color: rgba(44, 62, 80, 0.2);
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.certificate-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  color: #6c7293;
+}
+
+.certificate-section-title {
+  margin-bottom: 30px;
+  color: #3d5af1;
+  font-size: 32px;
+  font-weight: 700;
+  border-bottom: 2px solid #2c3e50;
+  padding-bottom: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.certificate-my-nfts-title {
+  font-size: 38px;
+  font-weight: 800;
+  color: #3d5af1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 35px;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.certificate-my-nfts-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: #3d5af1;
+  border-radius: 3px;
+}
+
+.certificate-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: #3d5af1;
+  border-radius: 2px;
+}
+
+.certificate-nfts-section-title {
+  margin-bottom: 16px;
+  color: #a0a0a0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* NFT Modal Styles */
+.certificate-nft-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.certificate-nft-modal {
+  background-color: #161a23;
+  border-radius: 12px;
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 800px;
+  max-height: 85vh;
+  overflow-y: auto;
+  color: #f5f5f7;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 24px 28px 20px 28px;
+  position: relative;
+}
+
+.certificate-nft-modal-header {
+  margin-bottom: 16px;
+}
+
+.certificate-nft-modal-header h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #2a2f3a;
+  font-size: 1.3rem;
+  color: #f5f5f7;
+  font-weight: 700;
+}
+
+.certificate-modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: #a0a0a0;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.certificate-modal-close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Grid layout for details boxes */
+.cert-modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 20px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .cert-modal-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+.cert-modal-section {
+  background: rgba(30, 34, 48, 0.98);
+  border-radius: 12px;
+  border: 1.5px solid #2a2f3a;
+  padding: 18px 18px 12px 18px;
+  min-width: 0;
+  width: 100%;
+  max-width: none;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  color: #f5f5f7;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.cert-modal-section h4 {
+  color: #4763e4;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #2a2f3a;
+  padding-bottom: 4px;
+}
+
+.cert-details-box {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  background: #181b23;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+}
+
+.cert-details-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  gap: 8px;
+  color: #a0a0a0;
+}
+
+.cert-details-label {
+  font-weight: 500;
+  color: #a0a0a0;
+  margin-right: 4px;
+  font-size: 0.85em;
+  flex: 0 0 38%;
+}
+
+.cert-details-value {
+  color: #f5f5f7;
+  font-weight: 500;
+  font-size: 0.85em;
+  flex: 1;
+  text-align: right;
+  word-break: break-word;
+}
+
+.certificate-nft-modal-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 12px 12px;
+}
+
+/* Download Button */
+.certificate-download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #4763e4;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), 0 0 20px rgba(71, 99, 228, 0.3);
+  margin: 10px auto;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.certificate-download-btn:hover {
+  background-color: #3d56c5;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5), 0 0 30px rgba(71, 99, 228, 0.4);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.certificate-download-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  background-color: #2c41a8;
+}

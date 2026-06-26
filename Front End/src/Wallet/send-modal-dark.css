@@ -1,0 +1,368 @@
+/* Dark themed Send/Withdraw Modal */
+.send-modal.dark {
+  background-color: #13151e;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  max-width: 540px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 20px;
+  max-height: 90vh;
+  animation: modalFadeIn 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.send-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.send-modal-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.send-modal-content {
+  padding: 24px;
+  background-color: #1a1d2d;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.send-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-wrapper input {
+  width: 100%;
+  background-color: #232738;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 16px;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.input-wrapper input:focus {
+  outline: none;
+  border-color: #4763e4;
+  box-shadow: 0 0 0 2px rgba(71, 99, 228, 0.2);
+}
+
+.input-wrapper input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.input-suffix {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.connect-metamask-btn {
+  background-color: #FF9E0D;
+  color: #000000;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+  transition: all 0.2s ease;
+}
+
+.connect-metamask-btn:hover {
+  background-color: #F5B544;
+}
+
+.connect-metamask-btn:disabled {
+  background-color: #4A4B57;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: not-allowed;
+}
+
+.metamask-connected {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #4caf50;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.balance-info {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.balance-value {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.error-message {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: #f44336;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.send-button {
+  background: linear-gradient(90deg, #4763e4 0%, #00d4ff 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.send-button:hover {
+  background: linear-gradient(90deg, #4763e4 0%, #00d4ff 100%);
+  transform: translateY(-1px);
+}
+
+.send-button:active {
+  transform: translateY(1px);
+}
+
+/* Success message styling */
+.success-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(71, 99, 228, 0.1);
+  color: #4763e4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.success-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  background-color: #1a1d2d;
+}
+
+.success-message {
+  text-align: center;
+  margin-block-end: 24px;
+}
+
+.success-message h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+}
+
+.success-message p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  max-width: 400px;
+}
+
+.transaction-details {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.detail-row:not(:last-child) {
+  border-block-end: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.detail-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.detail-value.id-value {
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.transaction-details h5 {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 8px 0;
+}
+
+.hash-container {
+  background-color: #232738;
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.tx-hash {
+  font-family: monospace;
+  font-size: 14px;
+  color: #ffffff;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 300px;
+}
+
+.view-tx-btn {
+  background-color: rgba(71, 99, 228, 0.1);
+  color: #4763e4;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.view-tx-btn:hover {
+  background-color: rgba(71, 99, 228, 0.15);
+}
+
+.success-actions {
+  display: flex;
+  gap: 12px;
+  inline-size: 100%;
+}
+
+.view-hashscan-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: rgba(71, 99, 228, 0.1);
+  color: #4763e4;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.view-hashscan-btn:hover {
+  background-color: rgba(71, 99, 228, 0.2);
+}
+
+.close-success-btn {
+  flex: 1;
+  background: #4763e4;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.close-success-btn:hover {
+  background: #3A4FC8;
+}
+
+@media (max-width: 576px) {
+  .send-modal.dark {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+  
+  .tx-hash {
+    max-width: 150px;
+  }
+}
