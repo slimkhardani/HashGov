@@ -1,4 +1,3 @@
-cat > README.md << 'EOF'
 # HashGov 🔐
 
 > Decentralized administrative services platform built on Hedera Hashgraph
